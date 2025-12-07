@@ -1,11 +1,8 @@
 # SleepSatelightFTC
-SleepSatelightFTC: A Lightweight and Interpretable Deep Learning Model for Single-Channel EEG-Based Sleep Stage Classification by Aozora Ito and Toshihisa Tanaka from Department of Electrical Engineering and Computer Science, Tokyo University of Agriculture and Technology
-
+A. Ito and T. Tanaka, "SleepSatelightFTC: A Lightweight and Interpretable Deep Learning Model for Single-Channel EEG-Based Sleep Stage Classification," in IEEE Access, vol. 13, pp. 46263-46272, 2025, doi: 10.1109/ACCESS.2025.3549436. [[paper](https://ieeexplore.ieee.org/document/10918694)]
 
 ## Dataset
-For downloading PSG data and preprocessing, please use the publicly available repository TinySleepNet:
-
-https://github.com/akaraspt/tinysleepnet
+For downloading PSG data and preprocessing, please use the publicly available repository [TinySleepNet](https://github.com/akaraspt/tinysleepnet).
 
 Downsample the signals by 2 and place the resulting NPZ files under:  
 (You can modify the directory path in `config.yaml` if needed.)
