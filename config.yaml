@@ -1,0 +1,46 @@
+dataset:
+  # "edf20" or "edf78"
+  name: "edf20"
+  dir: "./sleepedf_fs50"
+  fs: 50
+
+train:
+  seed: 0
+  port: 6006
+  class_weight:
+    0: 1.0
+    1: 1.0
+    2: 1.0
+    3: 1.0
+    4: 1.0
+
+train_1:
+  save_model_dir: "./epoch_models"
+  epochs: 100
+  batch_size: 32
+  patience: 10
+  # Optimizer Adam parameters
+  lr: 0.0001
+  beta_1: 0.9
+  beta_2: 0.999
+  epsilon: 1e-07
+  
+train_2:
+  base_model_dir: "./epoch_models"
+  save_model_dir: "./output_models"
+  epochs: 100
+  batch_size: 32
+  patience: 10
+  feature_dim: 300
+  # Optimizer Adam parameters
+  lr: 0.0001
+  beta_1: 0.9
+  beta_2: 0.999
+  epsilon: 1e-07
+
+model:
+  segment_length: 3000
+  n_channels: 1
+  fact_conv_size: 250
+  n_fact_conv: 16
+  D: 2
