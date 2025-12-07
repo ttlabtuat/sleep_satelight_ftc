@@ -3,16 +3,18 @@ SleepSatelightFTC: A Lightweight and Interpretable Deep Learning Model for Singl
 
 
 ## Dataset
-For PSG download and preprocessing, you can use the publicly available **TinySleepNet** repository: 
+For downloading PSG data and preprocessing, please use the publicly available repository TinySleepNet:
+
 https://github.com/akaraspt/tinysleepnet
 
-Downsample by 2 and place the preprocessed NPZ files under `sleepedf_fs50/`
+Downsample the signals by 2 and place the resulting NPZ files under:  
+(You can modify the directory path in `config.yaml` if needed.)
 
 sleepedf_fs50/  
 ├── SC4001E0_fs50.npz  
 ├── SC4002E0_fs50.npz  
-└── ...  
-
+└── ...
+ 
 ## Training
 
 **1. Train epoch-wise models (train_1)**
