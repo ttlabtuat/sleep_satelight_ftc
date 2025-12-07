@@ -42,13 +42,6 @@ def load_edfds(
     n_classes : int, default 5
         Number of classes for one-hot encoding of labels.
 
-    Returns
-    -------
-    tuple
-        (eeg_time, eeg_freq, eeg_label_one_hot)
-        - eeg_time : np.ndarray, shape (N, 1, L, 1)
-        - eeg_freq : np.ndarray, shape (N, 1, L/2, 1)
-        - eeg_label_one_hot : tf.Tensor, shape (N, n_classes)
     """
     paths = edfds_paths(dataset_dir)
 
@@ -82,6 +75,7 @@ def load_edfds(
     eeg_label = np.concatenate(eeg_label_list, axis=0)
 
     return eeg_time, eeg_freq, eeg_label
+
 
 
 
