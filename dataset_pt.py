@@ -11,7 +11,6 @@ class SleepDataset(Dataset):
     """
 
     def __init__(self, dataset_dir, indices, fs=100):
-        # Load with the original function (no change)
         eeg_time, eeg_freq, eeg_label = load_edfds(dataset_dir, indices, fs)
 
         # Convert numpy → torch tensor
@@ -23,5 +22,5 @@ class SleepDataset(Dataset):
         return len(self.labels)
 
     def __getitem__(self, idx):
-        # return shape exactly as Keras expected
         return self.eeg_time[idx], self.eeg_freq[idx], self.labels[idx]
+
